@@ -4,6 +4,9 @@ The backend for **AutoScheduler**, a bulk email scheduling and sending applicati
 
 ---
 
+![image](https://github.com/user-attachments/assets/bf20dabf-6919-4ecb-bfa6-c0831201e0ee)
+
+
 ## 🧰 Tech Stack
 
 | Tool           | Purpose                                             |
