@@ -25,10 +25,10 @@ class Auth_View(APIView):
             auto_login = req.data.get('auto_login')
             
             if auto_login:
-                print('Auto login attempted')
-                print('All cookies:', req.COOKIES)
+                # print('Auto login attempted')
+                # print('All cookies:', req.COOKIES)
                 refresh_token = req.COOKIES.get('refresh_token')
-                print('refresh_token found:', refresh_token is not None)
+                # print('refresh_token found:', refresh_token is not None)
                 
                 if not refresh_token:
                     response = Response({
@@ -128,7 +128,7 @@ class Auth_View(APIView):
                     return response
                     
                 except Exception as e:
-                    print(f"Auto login error: {str(e)}")
+                    # print(f"Auto login error: {str(e)}")
                     response = Response({
                         'flag': 0,
                         'error': 'Authentication failed'
@@ -227,9 +227,9 @@ class Auth_View(APIView):
                 return response
                 
         except Exception as e:
-            print(f"Unexpected error")
+            #print(f"Unexpected error")
             import traceback
-            print(traceback.format_exc())
+            #print(traceback.format_exc())
 
             response = Response({'error': 'Unexpected error occurred'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
             

@@ -47,4 +47,5 @@ The Autoscheduler Team
         )
 
     except Exception as e:
-        print(f"Error sending password reset email: {e}")
+        #print(f"Error sending password reset email: {e}")
+        pass
