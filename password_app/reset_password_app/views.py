@@ -12,7 +12,6 @@ class Reset_Password_View(APIView):
     def post(self, request):
         
         from_app = request.data.get('app')
-        print(request.COOKIES)
         if from_app:
             token = request.COOKIES.get('refresh_token')
             
