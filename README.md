@@ -49,8 +49,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Apply the migrations to set up the database schema
-python manage.py migrate
+python manage.py migrate app
 
 # Start the Django development server
 python manage.py runserver
+
+# Ensure redis instance is running and run celery
+celery -A backend worker --pool=solo --loglevel=info 
 ```
